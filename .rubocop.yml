@@ -1,0 +1,36 @@
+require:
+  - rubocop-rails
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'node_modules/**/*'
+    - 'script/**/*'
+    - 'tmp/**/*'
+    - 'spec/**/*'
+    - 'vendor/**/*'
+    - 'Gemfile'
+    - 'Rakefile'
+    - 'config.ru'
+
+Style/Documentation:
+  Description: 'Checks for missing top-level class and module documentation.'
+  Enabled: false
+Style/InlineComment:
+  Description: 'Avoid inline comments.'
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Description: 'Add the frozen string literal comment to the top of files.'
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Description: 'Checks style of children classes and modules.'
+  Enabled: false
+Style/EmptyMethod:
+  Description: 'Avoid empty methods.'
+  Enabled: false
+Style/StringLiterals:
+  Description: 'Checks if uses of quotes match the configured preference.'
+  Enabled: false
