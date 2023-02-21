@@ -1,5 +1,6 @@
 require:
   - rubocop-rails
+  - rubocop-rspec
 
 AllCops:
   NewCops: enable
@@ -7,6 +8,7 @@ AllCops:
     - 'bin/**/*'
     - 'db/**/*'
     - 'config/**/*'
+    - 'lib/**/*'
     - 'node_modules/**/*'
     - 'script/**/*'
     - 'tmp/**/*'

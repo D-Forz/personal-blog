@@ -1,11 +1,11 @@
 name: CI
-on:
-  pull_request:
-    branches:
-      - "*"
-  push:
-    branches:
-      - master
+on: [pull_request]
+  # pull_request:
+  #   branches:
+  #     - "*"
+  # push:
+  #   branches:
+  #     - master
 jobs:
   install-cache:
     runs-on: ubuntu-latest
@@ -55,7 +55,7 @@ jobs:
         run: |
           bin/rails db:create
           bin/rails db:schema:load
-          bin/rails spec
+          bundle exec rspec
       - name: Smoke test database seeds
         env:
           RAILS_ENV: test
