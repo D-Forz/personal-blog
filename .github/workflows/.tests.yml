@@ -1,11 +1,11 @@
 name: CI
-on:
-  pull_request:
-    branches:
-      - "*"
-  push:
-    branches:
-      - master
+on: [pull_request]
+  # pull_request:
+  #   branches:
+  #     - "*"
+  # push:
+  #   branches:
+  #     - master
 jobs:
   install-cache:
     runs-on: ubuntu-latest
@@ -53,9 +53,10 @@ jobs:
           DATABASE_URL: postgres://postgres:password@localhost:5432/myapp_test
           RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
         run: |
+          bin/rails tailwindcss:build
           bin/rails db:create
           bin/rails db:schema:load
-          bin/rails spec
+          bundle exec rspec
       - name: Smoke test database seeds
         env:
           RAILS_ENV: test

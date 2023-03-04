@@ -25,7 +25,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
+# gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
@@ -55,9 +55,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'rubocop-rails', require: false
   gem 'erb_lint', require: false
-
-  gem "rspec-rails"
-  gem "shoulda-matchers"
+  gem 'rubocop-rspec', require: false
 end
 
 group :development do
@@ -76,4 +74,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "rspec-rails"
+  gem "shoulda-matchers"
 end
+
+gem "tailwindcss-rails", "~> 2.0"

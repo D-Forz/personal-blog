@@ -1,0 +1,13 @@
+<nav class="flex items-center justify-between flex-wrap bg-gray-900 p-6">
+  <div class="flex items-center flex-shrink-0 text-white mr-6">
+    <a href="<%= posts_path %>" class="font-semibold text-xl tracking-tight">Posts</a>
+  </div>
+  <div class="flex items-center">
+    <%= link_to "Blog", posts_path, class: "bg-gray-800 text-white font-bold py-2 px-4 rounded ml-4" %>
+    <%= link_to "Projects", projects_path, class: "bg-gray-800 text-white font-bold py-2 px-4 rounded ml-4" %>
+    <%= link_to "About", about_path, class: "bg-gray-800 text-white font-bold py-2 px-4 rounded ml-4" %>
+    <button data-controller="theme-toggle" data-action="click->theme-toggle#toggle" class="bg-gray-800 text-white font-bold py-2 px-4 rounded ml-4">
+      Toggle Theme
+    </button>
+  </div>
+</nav>
